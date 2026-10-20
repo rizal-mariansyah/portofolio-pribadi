@@ -68,10 +68,10 @@ main{
 }
 .move-link{
     grid-area: tombol;
-    display: flex;
     gap: 20px;
+    display: flex;
     flex-wrap: wrap;
- 
+    text-decoration: none;
 }
 .move-link a{
     text-decoration: none;
