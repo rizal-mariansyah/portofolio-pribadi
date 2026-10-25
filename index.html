@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portofolio pribadi</title>
+
+    <title>Portofolio Pribadi | Rizal Mariansyah</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
   </head>
+
   <body>
+    <!-- Navbar -->
     <header class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">RM.</a>
+          <a class="navbar-brand" href="#home">RM.</a>
+
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Buka navigasi"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
@@ -46,40 +56,80 @@
       </nav>
     </header>
 
+    <!-- Bagian utama -->
     <main>
-      <section class="home">
+      <section class="home" id="home">
         <div class="artikel-link">
-          <h1>Halo..! selamat datang.</h1>
+          <h1>Halo! Selamat datang.</h1>
           <h2>Saya Rizal Mariansyah</h2>
-          <p>
-            Saya adalah seorang programmer front-end developer di bidang
-            pengembangan tampilan web development. Silahkan liat profil di
-            portofolio saya ini,jika anda tertarik silahkan hubungi saya lebih
-            lanjut.
-          </p>
-        </div>
 
-        <div class="move-link">
-          <a href="#projects" class="btn btn-primary">Lihat proyek</a>
-          <a href="#contact" class="btn btn-outline-primary">Hubungi saya</a>
+          <p>
+            Saya adalah mahasiswa Teknik Informatika yang tertarik pada
+            pengembangan tampilan website (front-end development). Silakan lihat
+            portofolio saya. Jika tertarik bekerja sama, jangan ragu untuk
+            menghubungi saya.
+          </p>
+
+          <div class="move-link">
+            <a href="#projects" class="btn btn-primary"> Lihat Proyek </a>
+
+            <a href="#contact" class="btn btn-primary"> Hubungi Saya </a>
+          </div>
         </div>
 
         <div class="image-link">
-          <img src="fotoProfil.jpg" width="100" alt="foto profil saya" />
+          <img src="fotoProfil.jpg" alt="Foto profil Rizal Mariansyah" />
         </div>
 
         <div class="info-link">
-          <h3>Rizal mariansyah</h3>
+          <h3>Rizal Mariansyah</h3>
           <p>Mahasiswa Teknik Informatika</p>
-          <p>&#128205; bangil, Pasuruan, Jawa timur</p>
+          <p>📍 Bangil, Pasuruan, Jawa Timur</p>
+        </div>
+      </section>
+
+      <!-- Bagian tentang  -->
+
+      <!-- Bagian Tentang -->
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="about-title">Tentang Saya</h2>
+
+          <div class="row align-items-center">
+            <!-- Gambar -->
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <img
+                src="gambarkomputer.jpg"
+                alt="Komputer untuk pengembangan website"
+                class="about-image"
+              />
+            </div>
+
+            <!-- Teks -->
+            <div class="col-md-8">
+              <p class="about-intro">Halo, saya Rizal Mariansyah.</p>
+
+              <p>
+                Saya adalah mahasiswa Teknik Informatika yang tertarik pada
+                dunia pemrograman dan pengembangan website.
+              </p>
+
+              <p>
+                Saat ini, saya sedang belajar HTML, CSS, dan JavaScript untuk
+                mengembangkan kemampuan saya sebagai Front-End Developer. Saya
+                senang mempelajari hal baru dan mencoba membuat proyek website
+                sebagai sarana latihan.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <hr />
+    <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2024 Rizal Mariansyah. All rights reserved.</p>
+        <p>&copy; 2026 Rizal Mariansyah. All rights reserved.</p>
       </div>
     </footer>
   </body>

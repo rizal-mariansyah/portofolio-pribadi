@@ -1,95 +1,315 @@
-/* header */
-.header{
-    background-color: #f2f2f2;
+
+/* =========================
+   RESET DAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER DAN NAVBAR
+========================= */
+
+.header {
     width: 100%;
-    padding: 10px 0px;
-    box-sizing: border-box;
-    
-    
-    
-}
-.nav{
-    text-align: right;
+    background-color: #f2f2f2;
 }
 
-   
-    
-
-
-body{
-    margin: 0px;
+.navbar {
+    padding: 15px 0;
 }
 
-main{
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0d6efd;
+}
+
+/* =========================
+   BAGIAN HOME
+========================= */
+
+main {
     padding: 20px;
-    box-sizing: border-box;
 }
 
-.home{
+.home {
     display: grid;
-    grid-template-columns: 250px, 1fr;
-    grid-template-areas: 
-    "article foto"
-    "tombol foto"
-    ".      info";
-    
-    align-items: start;
-    margin: 50px auto;
-    gap: 20px;
-    padding: 20px;
+
+    /* Kolom kiri fleksibel, kolom kanan untuk foto */
+    grid-template-columns: 1fr 300px;
+
+    grid-template-areas:
+        "article foto"
+        "tombol  foto"
+        ".     info";
+
+    align-items: center;
+    gap: 20px 40px;
+
     max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
 }
 
-.article-link{
+/* Artikel utama */
+
+.artikel-link {
     grid-area: article;
 }
-.move-link{
+
+.artikel-link h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.artikel-link h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0d6efd;
+}
+
+.artikel-link p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+
+.move-link {
     grid-area: tombol;
-    gap: 20px;
+
     display: flex;
     flex-wrap: wrap;
-    text-decoration: none;
-}
-.move-link a{
-    text-decoration: none;
-}
-
-.image-link{
-    grid-area: foto;
-    text-align: center;
-
-}
-
-.image-link img{
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.info-link{
-    grid-area: info;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.footer p{
-    text-align: center;
-    margin :  200px;
+    gap: 15px;
+    padding-top: 20px;
+    align-items: center;
     
 }
+.move-link .btn-primary{
+    color: hwb(272 4% 9%);
+    border:black 1px solid;
+    background-color: transparent
+}
+
+.move-link a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* =========================
+   FOTO PROFIL
+========================= */
+
+.image-link {
+    grid-area: foto;
+    text-align: center;
+}
+
+.image-link img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-img{
+    width: 100%;
+    flex-box: ;
+}
 
 
+/* =========================
+   INFORMASI PROFIL
+========================= */
+
+.info-link {
+    grid-area: info;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.info-link h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.info-link p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+}
+
+/* =========================
+   RESPONSIVE TABLET DAN HP
+========================= */
 
 @media screen and (max-width: 768px) {
-    .nav-links{
-        display: none;
-    }
-    .menu-icon{
-        display: block;
+    main {
+        padding: 10px;
     }
 
-    .image-link img{
+    .home {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "foto"
+            "article"
+            "tombol"
+            "info";
+
+        gap: 25px;
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .image-link img {
+        max-width: 220px;
+    }
+
+    .artikel-link {
+        text-align: center;
+    }
+
+    .artikel-link h1 {
+        font-size: 30px;
+    }
+
+    .artikel-link h2 {
+        font-size: 24px;
+    }
+
+    .move-link {
+        justify-content: center;
+    }
+
+    .info-link {
+        text-align: center;
+    }
+}
+
+/* =========================
+   HP KECIL
+========================= */
+
+@media screen and (max-width: 400px) {
+    .artikel-link h1 {
+        font-size: 26px;
+    }
+
+    .artikel-link h2 {
+        font-size: 21px;
+    }
+
+    .move-link {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .move-link a {
+        text-align: center;
+    }
+
+    .image-link img {
+        max-width: 180px;
+    }
+
+}
+
+/* =========================
+   BAGIAN ABOUT
+========================= */
+
+.about {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 30px 20px;
+}
+
+.about-title {
+    font-size: 32px;
+    color: #0d6efd;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.about-intro {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.about p {
+    line-height: 1.8;
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        margin: 30px auto;
+        padding: 20px 10px;
+    }
+
+    .about-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .about-image {
         max-width: 200px;
     }
 }
