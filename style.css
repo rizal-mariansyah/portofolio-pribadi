@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 70px;
 }
 
 body {
@@ -68,14 +69,13 @@ body {
     color: #0d6efd;
 }
 
-
-
 /* =========================
    BAGIAN HOME
 ========================= */
 
 main {
     padding: 20px;
+    padding-top: 90px;
 }
 
 .home {
@@ -136,8 +136,10 @@ main {
 }
 .move-link .btn {
     color: hwb(272 4% 9%);
-    border:black 1px solid;
-    background-color: transparent
+    border: 1px solid black;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 6px;
 }
 
 .move-link a {
@@ -158,15 +160,9 @@ main {
     width: 100%;
     max-width: 300px;
     aspect-ratio: 1 / 1;
-
     object-fit: cover;
     border-radius: 20px;
 }
-
-
-    
-
-
 
 /* =========================
    INFORMASI PROFIL
@@ -210,7 +206,8 @@ footer p {
 
 @media screen and (max-width: 768px) {
     main {
-        padding: 10px;
+        padding: 20px;
+        padding-top: 90px;
     }
 
     .home {
@@ -349,9 +346,9 @@ footer p {
         position: absolute;
         top: calc(100% + 10px);
         right: 10px;
-        max-width: 160px;
+        min-width: 160px;
         gap: 12px;
-        padding-top: 10px 20px;
+        padding : 10px 20px;
         background-color: rgb(236, 225, 231);
         border-radius: 8px;
         box-shadow: 0px 2px 12px rgba(0,0,0,0.15);
